@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "version": "0.1",
+  "name": "Süddeutsche Bildergalerie Navigation",
+  "short_name": "Süddeutsche Navigation",
+  "description": "Navigation per Pfeiltasten für die Bildergalerien der Süddeutschen Zeitung",
+
+  "author": "Lukas Schulze",
+  "homepage_url": "https://aldago.com",
+
+  "permissions": ["tabs", "storage", "*://www.sueddeutsche.de/*"],
+
+  "icons": {
+    "16": "icons/newspaper_16.png",
+    "48": "icons/newspaper_48.png",
+    "128": "icons/newspaper_128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.sueddeutsche.de/*"],
+      "js": ["js/jquery.min.js", "js/sueddeutsche.js"]
+    }
+  ],
+
+  "offline_enabled": false
+}
